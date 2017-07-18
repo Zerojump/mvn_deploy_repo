@@ -34,6 +34,8 @@
         <repository>
             <id>cmy-mvn-repo</id>
             <url>https://raw.githubusercontent.com/Zerojump/mvn_deploy_repo/master/repository</url>
+            <releases><enabled>true</enabled></releases>
+        	<snapshots><enabled>true</enabled></snapshots>
         </repository>
     </repositories>
 </project>
