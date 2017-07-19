@@ -3,14 +3,34 @@
 
 <project>
  	<!-- 其他maven配置 -->
+    <properties>
+        <spring-webmvc.version>4.3.9.RELEASE</spring-webmvc.version>
+        <apidoc-javadoc-generator-maven-plugin.version>0.0.1-SNAPSHOT</apidoc-javadoc-generator-maven-plugin.version>
+    </properties>
+
+    <!-- 主要使用里面com.cmy.apidoc.generator.annotations包里的注解 -->
+    <dependencies>
+        <dependency>
+            <groupId>com.cmy</groupId>
+            <artifactId>apidoc-javadoc-generator-core</artifactId>
+            <version>${apidoc-javadoc-generator-maven-plugin.version}</version>
+        </dependency>
+    </dependencies>
+
  	<build>
  		<plugins>
             <plugin>
                 <groupId>com.cmy</groupId>
                 <artifactId>apidoc-javadoc-generator-maven-plugin</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
+                <version>${apidoc-javadoc-generator-maven-plugin.version}</version>
                 <dependencies>
-                    <!-- 添加 configuration | apiSources | apiSource 这些类文件所需的依赖 -->
+                    <!-- 添加 configuration -> apiSources -> apiSource 这些类文件所需的依赖 -->
+                    <!-- 插件用到spring-core 和 spring-mvc 的注解，需要把Spring的依赖加上-->
+                    <dependency>
+                        <groupId>org.springframework</groupId>
+                        <artifactId>spring-web</artifactId>
+                        <version>${spring-webmvc.version}</version>
+                    </dependency>
                 </dependencies>
                 <configuration>
                     <apiDocFileName>ApiDocContent</apiDocFileName><!--生成文件的文件名，默认是ApiDoc，会生成ApiDoc.java文件-->

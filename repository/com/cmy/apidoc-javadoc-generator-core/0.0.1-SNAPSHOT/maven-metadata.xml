@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>com.cmy</groupId>
+  <artifactId>apidoc-javadoc-generator-core</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20170719.013623</timestamp>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <lastUpdated>20170719013623</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>jar</extension>
+        <value>0.0.1-20170719.013623-1</value>
+        <updated>20170719013623</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>0.0.1-20170719.013623-1</value>
+        <updated>20170719013623</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>
